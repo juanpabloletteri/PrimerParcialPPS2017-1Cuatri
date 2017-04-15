@@ -5,6 +5,9 @@ import { AlertController } from 'ionic-angular';
 
 import { LoadingController } from 'ionic-angular';
 
+import { MenuPage } from "../menu/menu";
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -30,7 +33,8 @@ export class HomePage {
       message: this.persona.nombre,
       buttons: ['Ok']
     });
-    alert.present()
+    alert.present();
+    this.navCtrl.setRoot(MenuPage);
       }
       else{
       let alert = this.alerCtrl.create({
