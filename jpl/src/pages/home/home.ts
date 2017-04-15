@@ -3,18 +3,28 @@ import { NavController } from 'ionic-angular';
 
 import { AlertController } from 'ionic-angular';
 
+import { LoadingController } from 'ionic-angular';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public alerCtrl: AlertController) {}
+  constructor(public navCtrl: NavController, public alerCtrl: AlertController, public loadingCtrl: LoadingController) {}
 
     persona:usuario =  new usuario();
+    
     login(){
+
       if(this.persona.nombre=="1"){
-        console.log("Iniciando Sesion");
+
+      this.loadingCtrl.create({
+      content: 'Cargando...',
+      duration: 2000,
+      dismissOnPageChange: true
+    }).present();
+
       let alert = this.alerCtrl.create({
       title: 'Ingreso Exitoso de:',
       message: this.persona.nombre,
