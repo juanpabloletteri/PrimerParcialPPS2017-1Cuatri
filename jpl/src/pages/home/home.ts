@@ -50,5 +50,7 @@ export class HomePage {
 export class usuario{
   nombre:string;
   pass:string;
+  correctas: number;
+  incorrectas:number;
   constructor(){}
 }

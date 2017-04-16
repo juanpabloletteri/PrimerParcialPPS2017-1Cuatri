@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { FormGroup,FormControl} from '@angular/forms';
+
+import { ContactPage } from '../contact/contact';
 /*
   Generated class for the Trivia3 page.
 
@@ -32,6 +34,6 @@ export class Trivia3Page {
     event.preventDefault();
   }
   confirmar(){
-//  this.navCtrl.setRoot(Trivia2Page);
+  this.navCtrl.setRoot(ContactPage);
   }
 }
